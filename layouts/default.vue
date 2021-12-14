@@ -1,7 +1,7 @@
 <template>
   <div id="main">
     <navbar-item />
-    <Nuxt />
+    <Nuxt/>
     <footer-item />
   </div>
 </template>
@@ -15,5 +15,8 @@ export default {
   #main {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
   }
 </style>

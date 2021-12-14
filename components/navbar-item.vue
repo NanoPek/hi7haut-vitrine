@@ -1,9 +1,11 @@
 <template>
   <header id="template_header">
-      <img id="logo_navbar" src="./../assets/images/logo.jpg" alt="">
+    <NuxtLink to="/" >
+      <img id="logo_navbar" src="./../assets/images/logo.jpg" alt=""/>
+    </NuxtLink>
       <nav id="template_navbar">
         <ul id="list_navbar">
-          <li><NuxtLink class="NuxtLinkNavbar" to="/">Accueil</NuxtLink></li>
+          <li><NuxtLink class="NuxtLinkNavbar" to="/" >Accueil</NuxtLink></li>
           <li><NuxtLink class="NuxtLinkNavbar" to="/equipage">L'équipage</NuxtLink></li>
           <li><NuxtLink class="NuxtLinkNavbar" to="/article">Les articles</NuxtLink></li>
           <li><NuxtLink class="NuxtLinkNavbar" to="/evenements">Les évènements</NuxtLink></li>
