@@ -2,15 +2,9 @@
   <div id="main_equipage">
     <h1>Equipage</h1>
     <div id="bureaux">
-      <div class="BDX" id="BDE">
-        <div class="upper">
-          <img src="./../assets/images/carteBDE.png" alt="Logo_bdx.png">
-          <h3>Lorem ipsum dolor sit amet. Qui porro perspiciatis ad nihil possimus ea placeat maiores qui saepe blanditiis et quibusdam praesentium sit internos numquam ad repudiandae autem. Et sunt rerum eum minima voluptatem est dicta exercitationem aut sequi dolorem. Rem cumque neque et modi magni et veniam mollitia est quae quod. Et neque dignissimos cum earum iure eos perspiciatis natus sed esse voluptatem vel laboriosam explicabo eum dolor numquam qui dolores deleniti.</h3>
-        </div>
-        <div class="lower">
-          images
-        </div>
-      </div>
+      <bureau-item nom_bureau="BDE"/>
+      <bureau-item nom_bureau="BDS"/>
+      <bureau-item nom_bureau="BDA"/>
 
     </div>
   </div>
@@ -19,8 +13,10 @@
 </template>
 
 <script>
+import BureauItem from "~/components/bureau-item";
 export default {
-  name: "equipage-page"
+  name: "equipage-page",
+  components: {BureauItem}
 }
 </script>
 
@@ -35,23 +31,7 @@ export default {
       display: flex;
       flex-direction: column;
 
-      .BDX {
-        display: flex;
-        flex-direction: column;
 
-        .upper {
-          display: flex;
-          flex-direction: row;
-          img {
-            width: 100px;
-            height: auto;
-            margin: 0 20px;
-          }
-        }
-        .lower {
-
-        }
-      }
     }
   }
 </style>
