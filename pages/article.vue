@@ -1,6 +1,6 @@
 <template>
   <div>
-    Page d'accueil des articles / blog / events
+    Page d'Accueil des articles / blog / events
     Ajouter les liens vers les autres articles
   </div>
 </template>
