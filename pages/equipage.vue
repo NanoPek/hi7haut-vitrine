@@ -1,14 +1,37 @@
 <template>
-  <h1>Equipage</h1>
+  <div id="main_equipage">
+    <h1>Equipage</h1>
+    <div id="bureaux">
+      <bureau-item nom_bureau="BDE"/>
+      <bureau-item nom_bureau="BDS"/>
+      <bureau-item nom_bureau="BDA"/>
+
+    </div>
+  </div>
+
 
 </template>
 
 <script>
+import BureauItem from "~/components/bureau-item";
 export default {
-  name: "equipage"
+  name: "equipage-page",
+  components: {BureauItem}
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+  #main_equipage {
+    display: flex;
+    flex-direction: column;
+    margin: 0 15%;
+    color: $dark-white;
 
+    #bureaux {
+      display: flex;
+      flex-direction: column;
+
+
+    }
+  }
 </style>

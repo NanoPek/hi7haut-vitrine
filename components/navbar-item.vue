@@ -1,15 +1,17 @@
 <template>
   <header id="template_header">
-    <img id="logo_navbar" src="./../assets/images/logo.jpg" alt="">
-    <nav id="template_navbar">
-      <ul id="list_navbar">
-        <li><NuxtLink class="NuxtLinkNavbar" to="/">Accueil</NuxtLink></li>
-        <li><NuxtLink class="NuxtLinkNavbar" to="/equipage">L'équipage</NuxtLink></li>
-        <li><NuxtLink class="NuxtLinkNavbar" to="/article">Les articles</NuxtLink></li>
-        <li><NuxtLink class="NuxtLinkNavbar" to="/evenements">Les évènements</NuxtLink></li>
-      </ul>
-    </nav>
+      <img id="logo_navbar" src="./../assets/images/logo.jpg" alt="">
+      <nav id="template_navbar">
+        <ul id="list_navbar">
+          <li><NuxtLink class="NuxtLinkNavbar" to="/">Accueil</NuxtLink></li>
+          <li><NuxtLink class="NuxtLinkNavbar" to="/equipage">L'équipage</NuxtLink></li>
+          <li><NuxtLink class="NuxtLinkNavbar" to="/article">Les articles</NuxtLink></li>
+          <li><NuxtLink class="NuxtLinkNavbar" to="/evenements">Les évènements</NuxtLink></li>
+        </ul>
+      </nav>
   </header>
+
+
 </template>
 
 <script>
@@ -29,8 +31,10 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
-  }
+    position: sticky;
+    top: 0;
 
+  }
   #logo_navbar {
     height: 80px;
     width: 80px;
