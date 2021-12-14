@@ -3,8 +3,17 @@
     <div class="ArticleInfo">
       <h1>{{ article.title }}</h1>
       <p>{{ article.description }}</p>
-      <img :src="article.img" :alt="article.alt" />
+      <img :src="require(`~/assets/images/${article.img}`)" :alt="article.alt" />
       <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
+      <div class="TableOfContents">
+        <nav>
+          <ul>
+            <li v-for="link of article.toc" :key="link.id">
+              <NuxtLink :to="`#${link.id}`" :class="{ 'link2': link.depth === 2, 'link3': link.depth === 3 }">{{ link.text }}</NuxtLink>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
 
     <nuxt-content :document="article" />
@@ -30,6 +39,16 @@
 </script>
 
 <style scoped>
+  
+
+  .link2 {
+    color: red;
+  }
+
+  .link3 { 
+    color: green;
+  }
+
   .ArticleInfo {
     display: flex;
     flex-direction: column;
@@ -47,6 +66,14 @@
 </style>
 
 <style>
+
+  .icon.icon-link {
+    background-image: url('~assets/svg/icon-hashtag.svg');
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-size: 24px 24px;
+  }
 
   .nuxt-content { 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
