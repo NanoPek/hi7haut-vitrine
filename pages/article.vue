@@ -5,7 +5,9 @@
       <li v-for="article of articles" :key="article.slug">
         <NuxtLink :to="`/articles/${article.slug}`">
           <div class="article">
-            <img :src="require(`~/assets/images/${article.img}`)" />
+            <div class="imgWrapper">
+              <img :src="require(`~/assets/images/${article.img}`)" />
+            </div>
             <div class="text">
               <h2>{{ article.title }}</h2>
               <p>{{ article.description }}</p>
@@ -55,19 +57,36 @@ export default {
     display: flex;
     width: 70vw;
     height: 150px;
-    justify-content: space-around;
+    justify-content: space-between;
     margin-bottom: 20px;
+  }
+
+  .text {
+
+    width: calc(100% - 300px);
+    margin-left: 10px;
+    
     p {
       font-style: italic;
-      text-decoration: none;
     }
+
+  }
+
+
+
+  .imgWrapper {
+    
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
   }
 
   img {
-    display: block;
-    max-width: 300px;
-    // max-height: 150px;
-    width: auto;
-    height: auto;
+    // display: block;
+    max-width: 100%;
+    max-height: 150px;
+    object-fit: cover;
   }
 </style>
