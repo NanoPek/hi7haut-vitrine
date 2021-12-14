@@ -3,7 +3,9 @@
     <h1>Equipage</h1>
     <div id="bureaux">
       <bureau-item nom_bureau="BDE"/>
+      <bureau-item nom_bureau="FOY"/>
       <bureau-item nom_bureau="BDS"/>
+      <bureau-item nom_bureau="BDD"/>
       <bureau-item nom_bureau="BDA"/>
 
     </div>

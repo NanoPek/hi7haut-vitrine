@@ -1,7 +1,7 @@
 <template>
   <header id="template_header">
     <NuxtLink to="/" >
-      <img id="logo_navbar" src="./../assets/images/logo.jpg" alt=""/>
+      <img id="logo_navbar" src="@/assets/images/logo.jpg" alt=""/>
     </NuxtLink>
       <nav id="template_navbar">
         <ul id="list_navbar">
@@ -38,8 +38,8 @@ export default {
 
   }
   #logo_navbar {
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     margin: 0 20px;
   }
   #template_navbar {

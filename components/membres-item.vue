@@ -29,6 +29,12 @@ export default {
       case "BDA":
         this.importAll(require.context('@/assets/images/BDA/', true, /\.png$/));
         break;
+      case "FOY":
+        this.importAll(require.context('@/assets/images/FOY/', true, /\.png$/));
+        break;
+      case "BDD":
+        this.importAll(require.context('@/assets/images/BDD/', true, /\.png$/));
+        break;
     }
   },
 
