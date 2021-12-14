@@ -28,8 +28,6 @@ export default {
   #main_equipage {
     display: flex;
     flex-direction: column;
-    margin: 0 15%;
-    color: $dark-white;
 
     #bureaux {
       display: flex;
@@ -42,11 +40,6 @@ export default {
         .upper {
           display: flex;
           flex-direction: row;
-          img {
-            width: 100px;
-            height: auto;
-            margin: 0 20px;
-          }
         }
         .lower {
 
