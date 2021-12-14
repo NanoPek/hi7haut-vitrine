@@ -22,9 +22,10 @@ export default {
 
 <style lang="scss" scoped>
   #main_equipage {
+    background-color: $grey;
     display: flex;
     flex-direction: column;
-    margin: 0 15%;
+    padding: 0 15%;
     color: $dark-white;
 
     #bureaux {

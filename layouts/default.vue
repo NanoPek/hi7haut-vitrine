@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="main">
     <navbar-item />
     <Nuxt />
     <footer-item />
@@ -11,3 +11,9 @@ export default {
   name: 'DefaultTemplate',
 }
 </script>
+<style scoped>
+  #main {
+    display: flex;
+    flex-direction: column;
+  }
+</style>
