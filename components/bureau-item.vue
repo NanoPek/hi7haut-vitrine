@@ -4,17 +4,15 @@
       <img v-bind:src="require('@/assets/images/' + nom_bureau + '.png')" alt="BDx.png">
       <h3>Lorem ipsum dolor sit amet. Qui porro perspiciatis ad nihil possimus ea placeat maiores qui saepe blanditiis et quibusdam praesentium sit internos numquam ad repudiandae autem. Et sunt rerum eum minima voluptatem est dicta exercitationem aut sequi dolorem. Rem cumque neque et modi magni et veniam mollitia est quae quod. Et neque dignissimos cum earum iure eos perspiciatis natus sed esse voluptatem vel laboriosam explicabo eum dolor numquam qui dolores deleniti.</h3>
     </div>
-    <div class="lower">
-      <img src="@/assets/images/1.png">
-      <img src="@/assets/images/2.png">
-      <img src="@/assets/images/3.png">
-    </div>
+    <membres-item v-bind:nom_bureau="nom_bureau"/>
   </div>
 </template>
 
 <script>
+import MembresItem from "~/components/membres-item";
 export default {
   name: "bureau-item",
+  components: {MembresItem},
   props: ['nom_bureau']
 }
 </script>
