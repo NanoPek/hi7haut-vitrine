@@ -1,10 +1,10 @@
 <template>
   <div id="VideoPlayer_main">
-    <img v-on:click="forceRerender(index -1)" src="@/assets/images/left.svg"/>
+    <img v-on:click="forceRerender(index -1)" src="@/assets/svg/left.svg"/>
     <div id="video">
       <YtEmbedItem :key="componentKey" :video_id="current_id[index]" />
     </div>
-    <img v-on:click="forceRerender(index + 1)" src="@/assets/images/right.svg"/>
+    <img v-on:click="forceRerender(index + 1)" src="@/assets/svg/right.svg"/>
   </div>
 </template>
 
@@ -40,6 +40,7 @@ export default {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
 img {
   height: 50px;
