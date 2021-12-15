@@ -5,7 +5,7 @@
     </NuxtLink>
       <nav id="template_navbar">
         <ul id="list_navbar">
-          <li><NuxtLink class="NuxtLinkNavbar" to="/" >Accueil</NuxtLink></li>
+          <li><NuxtLink id="retour_acceuil" to="/" >Retour à la carte</NuxtLink></li>
           <li><NuxtLink class="NuxtLinkNavbar" to="/equipage">L'équipage</NuxtLink></li>
           <li><NuxtLink class="NuxtLinkNavbar" to="/article">Les articles</NuxtLink></li>
           <li><NuxtLink class="NuxtLinkNavbar" to="/evenements">Les évènements</NuxtLink></li>
@@ -62,6 +62,28 @@ export default {
     position: relative;
     text-decoration: none;
     color: $gold;
+  }
+  #retour_acceuil {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    color: $blue;
+  }
+  #retour_acceuil:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: $blue;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  #retour_acceuil:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
   }
 
   .NuxtLinkNavbar:after {

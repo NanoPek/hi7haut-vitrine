@@ -50,7 +50,7 @@ img {
 
 }
 img:hover {
-  cursor: pointer;
+  cursor: $cursor_pointer;
   background-color: red;
 }
 
