@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'DefaultTemplate',
+  name: 'Default-Template',
 }
 </script>
 <style scoped>

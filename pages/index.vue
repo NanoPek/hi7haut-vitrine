@@ -1,32 +1,101 @@
 <template>
   <div id="accueil_main">
-    <img id="logo_main" src="@/assets/images/logo_t.png" alt=""/>
+    <div id="first_page">
+      <img id="logo_main" src="@/assets/images/logo_t.png" alt=""/>
+    </div>
+    <div id="second_page">
+      <div id="upper">
+        <img class="BDx" src="@/assets/images/BDE.png" alt=""/>
+        <img class="BDx" src="@/assets/images/FOY.png" alt=""/>
+        <img class="BDx" src="@/assets/images/BDA.png" alt=""/>
+      </div>
+      <div id="lower">
+        <img class="BDx" src="@/assets/images/BDS.png" alt=""/>
+        <img class="BDx" src="@/assets/images/BDD.png" alt=""/>
+      </div>
+    </div>
+    <div id="third_page">
+      <VideoPlayerItem/>
+    </div>
 
   </div>
 
 </template>
 
 <script>
+import VideoPlayerItem from "~/components/VideoPlayer-item";
 export default {
   name: 'IndexPage',
+  components: {VideoPlayerItem},
+  layout: 'firstpage'
 }
+
 </script>
 
 <style lang="scss" scoped>
   #accueil_main {
-    height: 100vh;
-    width: 100%;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    background-image: url("@/assets/images/beach.jpg");
-    background-size: cover;
-    background-position: bottom;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+
 
     #logo_main {
       height: 819px;
     }
+  }
+  #first_page {
+    height: 100vh;
+    width: 100%;
+    background-image: url("@/assets/images/beach.jpg");
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    scroll-snap-align: start;
+  }
+  #second_page {
+    height: 100vh;
+    width: 100%;
+    background-image: url("@/assets/images/map.jpg");
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    .BDx {
+      height: 200px;
+      margin: 50px;
+    }
+    #upper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+    #lower {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+  }
+  #third_page {
+    height: 100vh;
+    width: 100%;
+    background-color: $brown;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+
+
   }
 
 </style>
