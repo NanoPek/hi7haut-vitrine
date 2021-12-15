@@ -40,7 +40,7 @@ export default {
     justify-content: space-between;
     align-items: center;
     scroll-snap-type: y mandatory;
-    overflow-y: scroll;
+    
 
 
     #logo_main {
