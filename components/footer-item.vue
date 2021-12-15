@@ -1,5 +1,5 @@
 <template>
-  <footer> 
+  <footer>
     <div class="links">
       <icon-link src="facebook.svg" alt="facebook icon" href="https://facebook.com" class="link"/>
       <icon-link src="instagram.svg" alt="instagram icon" href="https://instagram.com" class="link"/>
@@ -10,7 +10,7 @@
       -
       <a href="https://www.nohehf.com" target="_blank">HINNIGER-FORAY Nohé</a>
       -
-      <a href="https://www.tomorrowtides.com/nano7.html" target="_blank">Hi7Haut</a>  
+      <a href="https://www.tomorrowtides.com/nano7.html" target="_blank">Hi7Haut</a>
     </div>
   </footer>
 </template>
@@ -23,7 +23,8 @@ export default {
 
 <style lang="scss" scoped>
   a {
-    color: white;  
+    color: white;
+    cursor: $cursor_pointer;
   }
   footer {
     display: flex;
@@ -41,7 +42,7 @@ export default {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      width: 80px;  
+      width: 80px;
     }
 
     .link {

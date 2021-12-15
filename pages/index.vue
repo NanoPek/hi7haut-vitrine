@@ -1,15 +1,18 @@
 <template>
   <div id="accueil_main">
-    <NuxtLink class="island" id="equipage_link" to="/equipage" >
+    <NuxtLink  id="equipage_link" class="island" to="/equipage" >
       <img id="equipage_svg" src="@/assets/svg/palmier.svg" alt="Découvrir l'équipage !"/>
     </NuxtLink>
     <img id="logo_main" src="@/assets/images/logo_t.png" alt=""/>
-    <NuxtLink  class="island" id="actualités_link" to="/article" >
+    <NuxtLink   id="actualités_link" class="island" to="/article" >
       <img id="actualités_svg" src="@/assets/svg/grotte.svg" alt="Les dernières actualités !"/>
     </NuxtLink>
-    <NuxtLink  class="island" id="evenements_link" to="/evenements" >
-      <img id="evenements_svg" src="@/assets/svg/crane.svg" alt="Les dernières actualités !"/>
+    <NuxtLink  id="evenements_link" class="island"  to="/evenements" >
+      <img id="evenements_svg" src="@/assets/svg/crane.svg" alt="Des infos sur les évènements à venir !"/>
     </NuxtLink>
+    <div class="island" id="video_player_div">
+      <img id="video_player_svg" src="@/assets/svg/pieuvre.svg" alt="Pour revoir les films de campagne !"/>
+    </div>
   </div>
 
 </template>
@@ -52,6 +55,14 @@ export default {
     transform: scale(0.8);
   }
 }
+@keyframes appearing {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
   #accueil_main {
     cursor: $cursor_classic;
     height: 100vh;
@@ -65,7 +76,12 @@ export default {
     .island {
       width: 100%;
       height: 100%;
-      animation: 2s infinite ease-in-out alternate-reverse zoom;
+      animation-name: appearing, zoom;
+      animation-duration: 2000ms, 2000ms;
+      animation-delay: 2000ms, 4000ms; /* add this */
+      animation-timing-function: ease-in, ease-in-out;
+      animation-iteration-count: 1, infinite;
+      animation-direction: normal, alternate;
     }
     .island:hover {
       animation-duration: 0.75s;
@@ -84,11 +100,16 @@ export default {
       grid-column: 3;
       grid-row: 3;
     }
+    #video_player_div {
+      grid-column: 2;
+      grid-row: 5;
+    }
     #logo_main {
       grid-column: 5;
       grid-row: 3;
       width: 100%;
       height: 100%;
+
     }
     #logo_main:hover {
       animation: 3s infinite ease-in-out alternate boat;

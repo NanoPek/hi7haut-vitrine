@@ -41,6 +41,7 @@ export default {
     height: 60px;
     width: 60px;
     margin: 0 20px;
+    cursor: $cursor_pointer;
   }
   #template_navbar {
     width: 100%;
@@ -62,12 +63,14 @@ export default {
     position: relative;
     text-decoration: none;
     color: $gold;
+    cursor: $cursor_pointer;
   }
   #retour_acceuil {
     display: inline-block;
     position: relative;
     text-decoration: none;
     color: $blue;
+    cursor: $cursor_pointer;
   }
   #retour_acceuil:after {
     content: '';

@@ -1,6 +1,18 @@
-
 body {
   margin: 0;
   font-family: "Pirata One";
   min-height: 100vh;
+}
+
+
+.layout-enter-active {
+  transition: opacity 0.5s;
+  transition-delay: 0.5s;
+}
+.layout-leave-active {
+  transition: opacity 0.5s;
+}
+.layout-enter,
+.layout-leave-active{
+    opacity: 0;
 }
