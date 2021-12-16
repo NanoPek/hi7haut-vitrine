@@ -65,7 +65,7 @@ export default {
 
     width: calc(100% - 300px);
     margin-left: 10px;
-    
+
     p {
       font-style: italic;
     }
@@ -75,12 +75,12 @@ export default {
 
 
   .imgWrapper {
-    
+
     width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
   }
 
   img {

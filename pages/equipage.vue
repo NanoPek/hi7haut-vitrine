@@ -18,7 +18,7 @@
 import BureauItem from "~/components/bureau-item";
 export default {
   name: "equipage-page",
-  components: {BureauItem}
+  components: {BureauItem},
 }
 </script>
 
