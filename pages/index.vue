@@ -1,18 +1,30 @@
 <template>
   <div id="accueil_main">
     <div id="sea" >
-      <NuxtLink  id="equipage_link" class="island" to="/equipage" >
-        <img id="equipage_svg" src="@/assets/svg/palmier.svg" alt="Découvrir l'équipage !"/>
-      </NuxtLink>
+      <div id="equipage_div"  class="island">
+        <NuxtLink  id="equipage_link" class="animated" to="/equipage" >
+          <img id="equipage_svg" src="@/assets/svg/palmier.svg" alt="Découvrir l'équipage !"/>
+        </NuxtLink>
+        <h1 id="equipage_text">L'équipage</h1>
+      </div>
+      <div id="actualités_div" class="island">
+
+        <h1 id="actualités_text">Les actualités</h1>
+        <NuxtLink   id="actualités_link" class="animated" to="/article" >
+          <img id="actualités_svg" src="@/assets/svg/grotte.svg" alt="Les dernières actualités !"/>
+        </NuxtLink>
+      </div>
       <img id="logo_main" src="@/assets/images/logo_t.png" alt=""/>
-      <NuxtLink   id="actualités_link" class="island" to="/article" >
-        <img id="actualités_svg" src="@/assets/svg/grotte.svg" alt="Les dernières actualités !"/>
-      </NuxtLink>
-      <NuxtLink  id="evenements_link" class="island"  to="/evenements" >
-        <img id="evenements_svg" src="@/assets/svg/crane.svg" alt="Des infos sur les évènements à venir !"/>
-      </NuxtLink>
+      <div id="evenements_div" class="island">
+        <NuxtLink  id="evenements_link" class="animated"  to="/evenements" >
+          <img id="evenements_svg" src="@/assets/svg/crane.svg" alt="Des infos sur les évènements à venir !"/>
+        </NuxtLink>
+        <h1 id="evenements_text">Les évènements</h1>
+      </div>
+
       <div class="island" id="video_player_div">
-        <img v-on:click="ChangeIndex" id="video_player_svg" src="@/assets/svg/pieuvre.svg" alt="Pour revoir les films de campagne !"/>
+        <h1 id="video_player_text">Les vidéos</h1>
+        <img id="video_player_svg" class="animated" v-on:click="ChangeIndex"  src="@/assets/svg/pieuvre.svg" alt="Pour revoir les films de campagne !"/>
       </div>
     </div>
     <div id="video_player_media" v-on:click="ChangeIndex" >
@@ -26,7 +38,6 @@
 </template>
 
 <script>
-// import VideoPlayerItem from "~/components/VideoPlayer-item";
 
 
 import VideoPlayerItem from "~/components/VideoPlayer-item";
@@ -105,33 +116,76 @@ export default {
       .island {
         width: 100%;
         height: 100%;
-        animation-name: appearing, zoom;
-        animation-duration: 2000ms, 2000ms;
-        animation-delay: 2000ms, 4000ms; /* add this */
-        animation-timing-function: ease-in, ease-in-out;
-        animation-iteration-count: 1, infinite;
-        animation-direction: normal, alternate;
-      }
-      .island:hover {
-        animation-duration: 0.75s;
-        cursor: $cursor_pointer;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
 
       }
-      #equipage_link {
+      .animated {
+        animation: 2s zoom alternate ease-in-out infinite;
+      }
+
+      .animated:hover {
+        animation-duration: 0.75s;
+        cursor: $cursor_pointer;
+      }
+
+      #equipage_div {
         grid-column: 6;
         grid-row: 2;
+        width: 100%;
+        height: 100%;
+
+        #equipage_link {
+          width: 100%;
+          height: 100%;
+        }
       }
-      #actualités_link {
+      #equipage_div:hover{
+        #equipage_text {
+          opacity: 1;
+        }
+      }
+      #actualités_div {
         grid-column: 8;
         grid-row: 4;
+
+        #actualités_link {
+          height: 100%;
+          width: 100%;
+        }
       }
-      #evenements_link {
+      #actualités_div:hover{
+        #actualités_text {
+          opacity: 1;
+        }
+      }
+      #evenements_div {
         grid-column: 3;
-        grid-row: 3;
+        grid-row: 2;
+
+        #evenements_link {
+          height: 100%;
+          width: 100%;
+        }
+      }
+      #evenements_div:hover{
+        #evenements_text {
+          opacity: 1;
+        }
       }
       #video_player_div {
         grid-column: 2;
-        grid-row: 5;
+        grid-row: 4;
+      }
+      #video_player_div:hover{
+        #video_player_text {
+          opacity: 1;
+        }
+      }
+      h1 {
+        opacity: 0;
       }
       #logo_main {
         grid-column: 5;
