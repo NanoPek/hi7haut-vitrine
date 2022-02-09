@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>Les articles & évènements :</h1>
+    <h1>Les dernières actualités :</h1>
     <ul>
       <li v-for="article of articles" :key="article.slug">
         <NuxtLink :to="`/articles/${article.slug}`">

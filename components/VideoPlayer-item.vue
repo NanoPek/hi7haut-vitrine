@@ -1,7 +1,7 @@
 <template>
   <div id="VideoPlayer_main">
     <img v-on:click="forceRerender(index -1)" src="@/assets/svg/left.svg"/>
-    <div id="video">
+    <div  id="video">
       <YtEmbedItem :key="componentKey" :video_id="current_id[index]" />
     </div>
     <img v-on:click="forceRerender(index + 1)" src="@/assets/svg/right.svg"/>
@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       index: 0,
-      current_id: ['XDNyJbqmLCE','khsIOsZMAEo'],
+      current_id: ['5HWNhN1qUgw','6URSxpyjQ1M'],
       componentKey: 0
     }
   },

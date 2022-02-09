@@ -24,7 +24,7 @@ export default {
 
 <style lang="scss" scoped>
   #main_equipage {
-    background-color: $grey;
+    background-color: $dark-blue;
     display: flex;
     flex-direction: column;
     padding: 0 15%;
