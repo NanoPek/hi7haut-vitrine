@@ -1,25 +1,26 @@
 <template>
-  <header id="template_header">
-    <NuxtLink to="/" >
+  <header id="template_header" class="header">
+    <NuxtLink id="logo_nuxlink" to="/" >
       <img id="logo_navbar" src="@/assets/images/logo.jpg" alt=""/>
     </NuxtLink>
-      <nav id="template_navbar">
-        <ul id="list_navbar">
-          <li><NuxtLink id="retour_acceuil" to="/" >Retour à la carte</NuxtLink></li>
-          <li><NuxtLink class="NuxtLinkNavbar" to="/equipage">L'équipage</NuxtLink></li>
-          <li><NuxtLink class="NuxtLinkNavbar" to="/article">Les Actualités</NuxtLink></li>
-          <li><NuxtLink class="NuxtLinkNavbar" to="/evenements">Les Évènements</NuxtLink></li>
-        </ul>
-      </nav>
-    <div id="mobile_menu_div" @click="toggleMobileMenu">
-      <div class="bar1"></div>
-      <div class="bar2"></div>
-      <div class="bar3"></div>
-      <ul class="mobile-menu">
+    <nav id="template_navbar">
+      <ul id="list_navbar">
+        <li><NuxtLink id="retour_acceuil" to="/" >Retour à la carte</NuxtLink></li>
+        <li><NuxtLink class="NuxtLinkNavbar" to="/equipage">L'équipage</NuxtLink></li>
+        <li><NuxtLink class="NuxtLinkNavbar" to="/article">Les Actualités</NuxtLink></li>
+        <li><NuxtLink class="NuxtLinkNavbar" to="/evenements">Les Évènements</NuxtLink></li>
+      </ul>
+    </nav>
+    <div id="mobile_menu_div" :class="['container', { 'open': toggled }]" @click="toggleMobileMenu">
+      <div :class="['bar1', { 'open': toggled }]"></div>
+      <div :class="['bar2', { 'open': toggled }]"></div>
+      <div :class="['bar3', { 'open': toggled }]"></div>
+      <ul :class="['mobile-menu', { 'open': toggled }]">
         <li><NuxtLink id="retour_acceuil_mobile" to="/" >Carte</NuxtLink></li>
         <li><NuxtLink class="NuxtLinkNavbar" to="/equipage">L'équipage</NuxtLink></li>
         <li><NuxtLink class="NuxtLinkNavbar" to="/article">Les Actualités</NuxtLink></li>
         <li><NuxtLink class="NuxtLinkNavbar" to="/evenements">Les Évènements</NuxtLink></li>
+        <li><img id="logo_navbar_li" src="@/assets/images/logo.jpg" alt=""/></li>
       </ul>
     </div>
     <LinksItem/>
@@ -33,6 +34,11 @@ import LinksItem from "~/components/links-item";
 export default {
   name: "NavBar",
   components: {LinksItem},
+  data() {
+    return {
+      toggled: false
+    }
+  },
   methods: {
     toggleMobileMenu() {
       this.toggled = !this.toggled;
@@ -131,7 +137,19 @@ export default {
   }
 }
 @media screen and (max-width: 800px) {
-  #logo_navbar {
+
+  .header {
+    background-color: $dark-grey;
+    width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+  }
+  #logo_nuxlink {
     display: none;
   }
 
@@ -144,16 +162,16 @@ export default {
     width: 35px;
     height: 3px;
     background-color: white;
-    margin: 6px 0;
+    margin: 6px 20px;
     transition: 0.4s;
   }
 
   .mobile-menu {
     display: none;
     position: absolute;
-    top: 50px;
+    top: 32px;
     left: 0;
-    height: calc(100vh - 50px);
+    height: calc(100vh - 32px);
     width: 100%;
   }
 
@@ -162,10 +180,34 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    background-color: $dark-grey;
+    padding: 30px 0 0 0 ;
   }
 
   .mobile-menu li {
+    display: inline-block;
     margin-bottom: 10px;
+    zoom:1;
+    *display:inline-block; /* this fix is needed for IE7- */
+    font-size: 40px;
+  }
+  #logo_navbar_li {
+    height: 100%;
+    width: 100%;
+  }
+
+  .NuxtLinkNavbar {
+    display: inline-block;
+    position: relative;
+    text-decoration:  underline;
+    color: $green;
+  }
+
+  #retour_acceuil_mobile {
+    display: inline-block;
+    position: relative;
+    text-decoration: underline;
+    color: $blue;
   }
 
 
