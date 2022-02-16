@@ -39,4 +39,11 @@ export default {
       }
     }
   }
+
+  @media screen and (max-width: 700px) {
+    .upper {
+      flex-direction: column !important;
+      align-items: center;
+    }
+  }
 </style>

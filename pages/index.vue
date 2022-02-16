@@ -5,7 +5,7 @@
         <img id="logo_main" src="@/assets/images/logo_t.png" alt=""/>
         <h1 id="helper_mobile">Explore les différentes îles pour découvrir notre liste !</h1>
       </div>
-      <div id="equipage_div"   class="island bottom">
+      <div id="equipage_div"   class="island ">
         <NuxtLink  id="equipage_link" class="animated" to="/equipage" >
           <img id="equipage_svg" src="@/assets/svg/palmier.svg" alt="Découvrir l'équipage !"/>
         </NuxtLink>
@@ -13,23 +13,25 @@
       </div>
       <div id="actualités_div" class="island">
 
-        <h1 id="actualités_text">Les actualités</h1>
         <NuxtLink   id="actualités_link" class="animated" to="/article" >
           <img id="actualités_svg" src="@/assets/svg/grotte.svg" alt="Les dernières actualités !"/>
         </NuxtLink>
+        <h1 id="actualités_text">Les actualités</h1>
+
       </div>
-      <div id="evenements_div" class="island bottom">
+      <div id="evenements_div" class="island ">
         <NuxtLink  id="evenements_link" class="animated"  to="/evenements" >
           <img id="evenements_svg" src="@/assets/svg/crane.svg" alt="Des infos sur les évènements à venir !"/>
         </NuxtLink>
         <h1 id="evenements_text">Les évènements</h1>
       </div>
 
-      <div class="island" id="video_player_div">
-        <h1 id="video_player_text">Les vidéos</h1>
+      <div class="island " id="video_player_div">
         <img id="video_player_svg" class="animated" v-on:click="ChangeIndex"  src="@/assets/svg/pieuvre.svg" alt="Pour revoir les films de campagne !"/>
+        <h1 id="video_player_text">Les vidéos</h1>
+
       </div>
-      <div class="island" id="video_player_div_mobile">
+      <div class="island bottom " id="video_player_div_mobile">
         <h1 id="video_player_text_mobile">Les vidéos</h1>
         <a id="video_player_svg_mobile_link" class="animated" href="https://www.youtube.com/channel/UCENnVoGO_68vCun99IBWAHg">
           <img id="video_player_svg_mobile" src="@/assets/svg/pieuvre.svg" alt="Pour revoir les films de campagne !"/>
@@ -109,7 +111,7 @@ export default {
     transform: scale(1);
   }
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 700px) {
   #accueil_main {
     #helper_mobile {
       display: none;
@@ -124,7 +126,7 @@ export default {
       align-items: center;
       display: grid;
       grid-template-columns: repeat(4, 1fr) 2fr repeat(4, 1fr);
-      grid-template-rows: repeat(2, 1fr) 2fr repeat(2, 1fr);
+      grid-template-rows: 2fr repeat(3, 1fr);
 
       .island {
         width: 100%;
@@ -132,6 +134,7 @@ export default {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
 
 
       }
@@ -147,7 +150,7 @@ export default {
 
       #equipage_div {
         grid-column: 6;
-        grid-row: 2;
+        grid-row: 3;
         width: 100%;
         height: 100%;
 
@@ -164,8 +167,8 @@ export default {
       }
 
       #actualités_div {
-        grid-column: 8;
-        grid-row: 4;
+        grid-column: 7;
+        grid-row: 2;
 
         #actualités_link {
           height: 100%;
@@ -180,8 +183,8 @@ export default {
       }
 
       #evenements_div {
-        grid-column: 3;
-        grid-row: 2;
+        grid-column: 4;
+        grid-row: 3;
 
         #evenements_link {
           height: 100%;
@@ -196,8 +199,8 @@ export default {
       }
 
       #video_player_div {
-        grid-column: 2;
-        grid-row: 4;
+        grid-column: 3;
+        grid-row: 2;
       }
 
       #video_player_div:hover {
@@ -213,7 +216,7 @@ export default {
 
       #logo_main_div {
         grid-column: 5;
-        grid-row: 3;
+        grid-row: 1;
         width: 100%;
         height: 100%;
         #logo_main {
@@ -259,7 +262,7 @@ export default {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
   h1 {
     font-size: 30px;
     text-align: center;

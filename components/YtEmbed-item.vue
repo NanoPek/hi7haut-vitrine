@@ -1,5 +1,5 @@
 <template>
-  <iframe :width="windowWidth/1.65" :height="windowWidth/1.65/1.84" :src="'https://www.youtube.com/embed/' + video_id " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <iframe :width="windowWidth/1.65" :height="windowWidth/1.65/1.7779" :src="'https://www.youtube.com/embed/' + video_id " title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 </template>
 
@@ -9,7 +9,7 @@ export default {
   props: ['video_id'],
   data() {
     return {
-      windowWidth: 200,
+      windowWidth: 10,
       txt: ''
     }
   },
@@ -21,6 +21,7 @@ export default {
   },
 
   mounted() {
+    this.windowWidth = window.innerWidth
     this.$nextTick(() => {
       window.addEventListener('resize', this.onResize);
     })

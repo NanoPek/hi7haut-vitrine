@@ -7,7 +7,6 @@
       <bureau-item nom_bureau="BDS"/>
       <bureau-item nom_bureau="BDD"/>
       <bureau-item nom_bureau="BDA"/>
-
     </div>
   </div>
 
@@ -33,8 +32,12 @@ export default {
     #bureaux {
       display: flex;
       flex-direction: column;
-
-
+    }
+  }
+  @media screen and (max-width: 700px) {
+    #main_equipage {
+      margin-top: 50px;
+      padding: 0 5%;
     }
   }
 </style>

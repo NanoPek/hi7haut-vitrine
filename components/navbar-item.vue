@@ -50,8 +50,8 @@ export default {
 
 <style lang="scss">
 
-@media screen and (min-width: 800px) {
-  #template_header {
+@media screen and (min-width: 700px) {
+  .header {
     width: 100%;
     background-color: $dark-grey;
     font-family: "Pirata One";
@@ -136,28 +136,33 @@ export default {
     display: none;
   }
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 700px) {
+
+  .links {
+    display: none !important;
+  }
+
+  #logo_navbar {
+    height: 50px;
+    width: 50px;
+    margin: 0 20px;
+  }
 
   .header {
     background-color: $dark-grey;
     width: 100%;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row ;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0;
     z-index: 2;
   }
-  #logo_nuxlink {
-    display: none;
-  }
 
   #template_navbar {
     display: none;
   }
-
-
   #mobile_menu_div div {
     width: 35px;
     height: 3px;

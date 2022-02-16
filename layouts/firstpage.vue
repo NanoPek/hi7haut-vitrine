@@ -18,7 +18,7 @@ export default {
     display: flex;
     flex-direction: column;
   }
-  @media screen and (min-width: 800px){
+  @media screen and (min-width: 700px){
     #navbar {
       display: none;
     }

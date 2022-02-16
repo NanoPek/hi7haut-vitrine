@@ -1,22 +1,15 @@
 <template>
-  <article>
+  <article class="Article">
     <div class="ArticleInfo">
       <h1>{{ article.title }}</h1>
-      <p>{{ article.description }}</p>
-      <img :src="require(`~/assets/images/${article.img}`)" :alt="article.alt" />
-      <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
-      <div class="TableOfContents">
-        <nav>
-          <ul>
-            <li v-for="link of article.toc" :key="link.id">
-              <NuxtLink :to="`#${link.id}`" :class="{ 'link2': link.depth === 2, 'link3': link.depth === 3 }">{{ link.text }}</NuxtLink>
-            </li>
-          </ul>
-        </nav>
+      <p id="description">{{ article.description }}</p>
+      <div id="image_wrapper">
+        <img :src="require(`~/assets/images/${article.img}`)" :alt="article.alt" />
       </div>
+      <p>Article last updated: {{ formatDate(article.updatedAt) }}</p>
     </div>
 
-    <nuxt-content :document="article" />
+    <nuxt-content id="content" :document="article" />
   </article>
 </template>
 
@@ -38,45 +31,76 @@
   }
 </script>
 
-<style scoped>
-  
+<style  lang="scss" scoped>
 
-  .link2 {
-    color: red;
-  }
+.Article {
+  width: 70%;
+}
 
-  .link3 { 
-    color: green;
-  }
 
   .ArticleInfo {
     display: flex;
     flex-direction: column;
   }
 
-  h1 { 
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  h1 {
+    font-size: 50px;
+    font-weight: bold;
   }
 
-  img {
-    
-    max-height: 200px;
-  
+  p {
+    font-size: 20px;
+    margin: 0;
+  }
+  #description {
+    font-size: 30px;
+  }
+  #image_wrapper {
+    margin: 20px 0;
+
+    img {
+      height: auto;
+      width: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+
+  .TableOfContents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 40px;
+    margin: 20px 0;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .link2 {
+      color: $blue;
+      font-size: 30px;
+    }
+
+    .link3 {
+      color: $green;
+      margin-left: 50px;
+      font-size: 20px;
+    }
   }
 </style>
 
 <style>
 
   .icon.icon-link {
-    background-image: url('~assets/svg/icon-hashtag.svg');
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-size: 24px 24px;
+    display: none;
   }
 
-  .nuxt-content { 
+  .nuxt-content {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 100px;
   }
 
   .nuxt-content h2 {
@@ -89,7 +113,14 @@
   }
   .nuxt-content p {
     margin-bottom: 20px;
-    font-size: medium;
+    font-size: 18px;
     font-weight: 400;
+  }
+
+  @media screen and (max-width: 700px) {
+    .Article {
+      width: 90% !important;
+    }
+
   }
 </style>

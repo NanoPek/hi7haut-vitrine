@@ -69,4 +69,42 @@ export default {
     color: white;
     font-size: 20px;
   }
+
+  @media screen and (max-width: 1350px) {
+    #main_membres {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+
+  @media screen and (max-width: 1150px) {
+    #main_membres {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  @media screen and (max-width: 950px) {
+    #main_membres {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media screen and (max-width: 700px) {
+    #main_membres {
+      img {
+        width: 150px;
+      }
+    }
+    #displayer_membres {
+      margin: 5px;
+
+    }
+    .name {
+      font-size: 18px;
+    }
+  }
+  @media screen and (max-width: 530px) {
+    #main_membres {
+      img {
+        width: 100px;
+      }
+    }
+  }
 </style>

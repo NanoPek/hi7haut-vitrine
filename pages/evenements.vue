@@ -1,14 +1,19 @@
 <template>
-  <h1>Evenements</h1>
-
+  <div id="main_evenements">
+    <h1>Evenements</h1>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "evenements"
+  name: "evenements-page"
 }
 </script>
 
-<style scoped>
-
+<style scoped lang="scss">
+@media screen and (max-width: 700px) {
+  #main_evenements {
+    margin-top: 50px;
+  }
+}
 </style>
