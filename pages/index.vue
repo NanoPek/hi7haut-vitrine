@@ -219,9 +219,15 @@ export default {
         grid-row: 1;
         width: 100%;
         height: 100%;
-        #logo_main {
-          width: 100%;
-          height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        img {
+          height: auto;
+          width: auto;
+          max-width: 100%;
+          max-height: 90%;
         }
 
       }
