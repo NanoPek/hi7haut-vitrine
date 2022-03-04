@@ -1,6 +1,6 @@
 <template>
   <div id="main_equipage">
-    <h1>Equipage</h1>
+    <h1>L'équipage</h1>
     <div id="bureaux">
       <bureau-item nom_bureau="BDE"/>
       <bureau-item nom_bureau="FOY"/>

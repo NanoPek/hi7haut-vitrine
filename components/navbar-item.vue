@@ -1,14 +1,23 @@
 <template>
   <header id="template_header" class="header">
-    <NuxtLink id="logo_nuxlink" to="/" >
-      <img id="logo_navbar" src="@/assets/images/logo.jpg" alt=""/>
-    </NuxtLink>
     <nav id="template_navbar">
       <ul id="list_navbar">
-        <li><NuxtLink id="retour_acceuil" to="/" >Retour à la carte</NuxtLink></li>
-        <li><NuxtLink class="NuxtLinkNavbar" to="/equipage">L'équipage</NuxtLink></li>
-        <li><NuxtLink class="NuxtLinkNavbar" to="/article">Les Actualités</NuxtLink></li>
-        <li><NuxtLink class="NuxtLinkNavbar" to="/evenements">Les Évènements</NuxtLink></li>
+        <li><NuxtLink id="retour_acceuil" class="NuxtLinkNavbar" to="/" >
+              <img class="icon" src="@/assets/images/logo.jpg" alt=""/>
+              <p>Retour à l'accueil</p>
+            </NuxtLink></li>
+        <li><NuxtLink class="NuxtLinkNavbar retour" to="/equipage">
+          <img class="icon" src="@/assets/images/assets_crew.png" alt=""/>
+          <p >L'équipage</p>
+        </NuxtLink></li>
+        <li><NuxtLink class="NuxtLinkNavbar retour" to="/article">
+          <img class="icon" src="@/assets/images/assets_news.png" alt=""/>
+          <p>Les Actualités</p>
+        </NuxtLink></li>
+        <li><NuxtLink class="NuxtLinkNavbar retour" to="/evenements">
+          <img class="icon" src="@/assets/images/assets_events.png" alt=""/>
+          <p>Les Évènements</p>
+        </NuxtLink></li>
       </ul>
     </nav>
     <div id="mobile_menu_div" :class="['container', { 'open': toggled }]" @click="toggleMobileMenu">
@@ -51,6 +60,11 @@ export default {
 <style lang="scss">
 
 @media screen and (min-width: 700px) {
+  .icon {
+    height: 40px;
+    width: 40px;
+    padding-right: 5px;
+  }
   .header {
     width: 100%;
     background-color: $dark-grey;
@@ -71,29 +85,39 @@ export default {
   }
   #template_navbar {
     width: 100%;
+    height: 100%;
   }
   #list_navbar {
     list-style: none;
     margin: 0;
+    height: 100%;
+    display: flex;
   }
   ul > li {
     display: inline-block;
     margin: 0 20px;
     zoom:1;
     *display:inline; /* this fix is needed for IE7- */
+    height: 100%;
+
+  p {
+    margin: 0;
+  }
 
   }
 
   .NuxtLinkNavbar {
-    display: inline-block;
     position: relative;
     text-decoration: none;
-    color: $green;
+    color: $gold;
+    text-shadow: 2px 2px 4px #000;
     cursor: $cursor_pointer;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
   #retour_acceuil {
-    display: inline-block;
-    position: relative;
     text-decoration: none;
     color: $blue;
     cursor: $cursor_pointer;
@@ -104,7 +128,7 @@ export default {
     width: 100%;
     transform: scaleX(0);
     height: 2px;
-    bottom: 0;
+    bottom: -3px;
     left: 0;
     background-color: $blue;
     transform-origin: bottom right;
@@ -115,23 +139,28 @@ export default {
     transform-origin: bottom left;
   }
 
-  .NuxtLinkNavbar:after {
+  .retour {
+    text-decoration: none;
+    color: $gold;
+    cursor: $cursor_pointer;
+  }
+  .retour:after {
     content: '';
     position: absolute;
     width: 100%;
     transform: scaleX(0);
     height: 2px;
-    bottom: 0;
+    bottom: -3px;
     left: 0;
-    background-color: $green;
+    background-color: $gold;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
   }
-
-  .NuxtLinkNavbar:hover:after {
+  .retour:hover:after {
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
   #mobile_menu_div {
     display: none;
   }
@@ -205,7 +234,8 @@ export default {
     display: inline-block;
     position: relative;
     text-decoration:  underline;
-    color: $green;
+    color: $gold;
+    text-shadow: 2px 2px 4px #000;
   }
 
   #retour_acceuil_mobile {
