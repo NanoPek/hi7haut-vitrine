@@ -66,7 +66,7 @@ export default {
     margin: 10px;
   }
   .name{
-    color: white;
+    color: var(--text-color);
     font-size: 20px;
   }
 

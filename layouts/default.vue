@@ -19,7 +19,7 @@ export default {
     align-items: center;
     min-height: 100vh;
     cursor: $cursor_classic;
-    background-color: $dark-blue;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--text-color);
   }
 </style>

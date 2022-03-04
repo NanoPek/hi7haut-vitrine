@@ -23,11 +23,11 @@ export default {
 
 <style lang="scss" scoped>
   #main_equipage {
-    background-color: $dark-blue;
+    background-color: var(--background-color);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     padding: 0 15%;
-    color: $dark-white;
 
     #bureaux {
       display: flex;

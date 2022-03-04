@@ -143,7 +143,8 @@ export default {
       cursor: $cursor_classic;
       height: 100%;
       width: 100%;
-      background-image: url("assets/images/bk_desk.jpg");
+      background-color: var(--background-color);
+      color: var(--text-color);
       justify-items: center;
       align-items: center;
       display: flex;
@@ -210,11 +211,9 @@ export default {
       }
 
       p {
-        font-size: 30px;
+        font-size: 35px;
         opacity: 1;
         text-align: center;
-        color: $gold;
-        text-shadow: 2px 2px 4px #000;
       }
 
         #logo_main {
@@ -264,8 +263,6 @@ export default {
   p {
     font-size: 30px;
     text-align: center;
-    color: $gold;
-    text-shadow: 2px 2px 4px #000;
   }
 
   #video_player_div {
@@ -282,7 +279,8 @@ export default {
     z-index: 0;
     display: flex;
     flex-direction: column;
-    background-color: $dark-blue;
+    background-color: var(--background-color);
+    color: var(--text-color);
 
     #top_layer {
       padding-top: 70px;

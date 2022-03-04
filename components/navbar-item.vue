@@ -32,6 +32,7 @@
         <li><img id="logo_navbar_li" src="@/assets/images/logo.jpg" alt=""/></li>
       </ul>
     </div>
+    <ThemeButton/>
     <LinksItem/>
   </header>
 
@@ -45,7 +46,7 @@ export default {
   components: {LinksItem},
   data() {
     return {
-      toggled: false
+      toggled: false,
     }
   },
   methods: {
@@ -181,7 +182,7 @@ export default {
     background-color: $dark-grey;
     width: 100%;
     display: flex;
-    flex-direction: row ;
+    flex-direction: row-reverse ;
     justify-content: space-between;
     align-items: center;
     position: fixed;

@@ -52,14 +52,15 @@ export default {
     font-size: 40px;
   }
   .article {
-    background-color: $gold;
+    background-color: var(--background-color-inv);
+    color: var(--text-color-inv);
     border-radius: 5px;
-    color: black;
     display: flex;
     width: 70vw;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    padding: 10px 0;
   }
 
   .text {

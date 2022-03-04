@@ -1,3 +1,22 @@
+:root {
+  /* Variables for default theme (light-mode) */
+  --background-color: #F5F5DC;
+  --text-color: black;
+  --text-color-inv: #e6e5e3;
+  --background-color-inv: #011627;
+}
+
+[data-theme="🌛"] {
+  /* Variables for dark mode */
+  --background-color: #011627;
+  --text-color: #e6e5e3;
+  --text-color-inv: black;
+  --background-color-inv: #F5F5DC;
+}
+
+
+
+
 body {
   margin: 0;
   font-family: "Pirata One";
