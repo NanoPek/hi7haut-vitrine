@@ -12,17 +12,17 @@
           </NuxtLink>
           <p id="equipage_text">L'équipage</p>
         </div>
-        <div id="evenements_div" class="island ">
-          <NuxtLink  id="evenements_link" class="link animated"  to="/evenements" >
-            <img class="icon" src="@/assets/images/assets_events.png" alt="Des infos sur les évènements à venir !"/>
-          </NuxtLink>
-          <p id="evenements_text">Les évènements</p>
-        </div>
         <div id="actualités_div" class="island">
           <NuxtLink   id="actualités_link" class="link animated" to="/article" >
             <img class="icon" src="@/assets/images/assets_news.png" alt="Les dernières actualités !"/>
           </NuxtLink>
           <p id="actualités_text">Les actualités</p>
+        </div>
+        <div id="evenements_div" class="island ">
+          <NuxtLink  id="evenements_link" class="link animated"  to="/evenements" >
+            <img class="icon" src="@/assets/images/assets_events.png" alt="Des infos sur les évènements à venir !"/>
+          </NuxtLink>
+          <p id="evenements_text">Les évènements</p>
         </div>
         <div  id="video_player_div" class="island ">
           <div class="link animated">
