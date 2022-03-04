@@ -204,7 +204,7 @@ export default {
   .mobile-menu {
     display: none;
     position: absolute;
-    top: 32px;
+    top: 26px;
     left: 0;
     height: calc(100vh - 32px);
     width: 100%;
