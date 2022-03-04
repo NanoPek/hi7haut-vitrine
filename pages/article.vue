@@ -114,6 +114,7 @@ export default {
       align-items: center;
       justify-content: center;
       height: 100%;
+      padding-top: 10px;
 
     }
 
@@ -125,7 +126,8 @@ export default {
     }
     a {
       text-decoration: none;
-      color: white;
+      color: var(--text-color);
+
     }
     ul {
       list-style-type: none;
@@ -133,18 +135,22 @@ export default {
       margin: 0;
 
       li {
-        width: 90%;
         margin: 10px 5%;
+
 
         .article {
           width: 100%;
           display: flex;
           flex-direction: column;
           align-items: center;
+          border: 2px solid var(--background-color-inv) ;
+          border-radius: 10px;
+
+
 
           .text {
-            width: 100%;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0 5px;
             h2 {
               font-size: 25px;
             }
