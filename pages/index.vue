@@ -133,7 +133,7 @@ export default {
 
 @media screen and (min-width: 700px) {
   #accueil_main {
-    height: calc(100vh - 50px);
+    height: 100vh;
     width: 100%;
     #helper_mobile {
       display: none;
@@ -211,6 +211,7 @@ export default {
       }
 
       p {
+        margin: 0 0 40px 0;
         font-size: 35px;
         opacity: 1;
         text-align: center;

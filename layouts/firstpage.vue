@@ -3,7 +3,6 @@
     <navbar-item id="navbar"/>
     <ThemeButton class="button"/>
     <Nuxt/>
-    <footer-item id="footer"/>
   </div>
 </template>
 
